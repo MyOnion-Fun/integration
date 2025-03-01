@@ -1,0 +1,230 @@
+{
+  "version": "v3.12.0",
+  "name": "DexPair",
+  "bytecode": "05080e1c402b403b4069407d4194422c010000000103d3e24906adce0002010000000103d341edea0fce0102010000000204d373c3e78fcdce0202010000000204d37de99ed1a000a00102010002030017d3276c55a80d1340703b1702160016023116011602311a0d7b1600136710331601136710331a117b0000020200071600160100041600a1001601a1010100020c05409cd3b8c8035316001367103413087ba0000c33a0010c331a117b16014c061600a0003113097b4a051600a0013113097b0c17020c17030c17040c17050c17060c17070c170816014c402516000f2c1343e82d170616060e2d1707160616072b1708160016062b1702a00016022a1704a000a0012c16042a0d2b16042d1705a00116052b17034a4029a00116002a1705a000a0012c16052a0d2b16052d1704a00016042b170916090f2c1343e82d1706160916063313077b16060e2d1707160616072b1708160916062b170316030c3313077b160813c3038d7ea4c6800033130a7b160713c3038d7ea4c6800033130a7ba000a0012c170a160416052c170b160b160a3413067b160316081607160416050201010308034059d30d0a54b716010c3313087b1601160200061707170617051704170316024c0d1603a00131117b16001601a91600ce021603ab4a10160316052a16042aa00031117b1600ce021601ac16001603a8b21605a2b2b216001605100cce010100b21604a2b2b216001604100cce00010005160016063fa0003f2016073fa0013f20160416057316061607000516031604160502",
+  "codeHash": "080844157ec1adcd711a727e6b36f638c3b7a35fa19c2734d3d41c9ac2e506ed",
+  "fieldsSig": {
+    "names": [
+      "protocolFeeCollector",
+      "royaltyFeeCollector",
+      "tokenId",
+      "reserve0",
+      "reserve1"
+    ],
+    "types": [
+      "FeeCollector",
+      "FeeCollector",
+      "ByteVec",
+      "U256",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "eventsSig": [
+    {
+      "name": "Trade",
+      "fieldNames": [
+        "caller",
+        "alphAmount",
+        "tokenAmount",
+        "platformFeeAmount",
+        "royaltyFeeAmount"
+      ],
+      "fieldTypes": [
+        "Address",
+        "I256",
+        "I256",
+        "U256",
+        "U256"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "getProtocolFeeCollector",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "FeeCollector"
+      ]
+    },
+    {
+      "name": "getRoyaltyFeeCollector",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "FeeCollector"
+      ]
+    },
+    {
+      "name": "getTokenPair",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "ByteVec",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "getReserves",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256",
+        "U256"
+      ]
+    },
+    {
+      "name": "validateReserve",
+      "paramNames": [
+        "valReserve0",
+        "valReserve1"
+      ],
+      "paramTypes": [
+        "U256",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "update",
+      "paramNames": [
+        "newReserve0",
+        "newReserve1"
+      ],
+      "paramTypes": [
+        "U256",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "estimateOutput",
+      "paramNames": [
+        "amountIn",
+        "isBuy"
+      ],
+      "paramTypes": [
+        "U256",
+        "Bool"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": [
+        "U256",
+        "U256",
+        "U256",
+        "U256",
+        "U256"
+      ]
+    },
+    {
+      "name": "swap",
+      "paramNames": [
+        "caller",
+        "amountIn",
+        "isBuy"
+      ],
+      "paramTypes": [
+        "Address",
+        "U256",
+        "Bool"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false
+      ],
+      "returnTypes": [
+        "U256",
+        "U256",
+        "U256"
+      ]
+    }
+  ],
+  "constants": [
+    {
+      "name": "MINIMUM_AMOUNT",
+      "value": {
+        "type": "U256",
+        "value": "10000"
+      }
+    }
+  ],
+  "enums": [
+    {
+      "name": "ErrorCodes",
+      "fields": [
+        {
+          "name": "ReserveOverflow",
+          "value": {
+            "type": "U256",
+            "value": "1"
+          }
+        },
+        {
+          "name": "InsufficientLiquidity",
+          "value": {
+            "type": "U256",
+            "value": "5"
+          }
+        },
+        {
+          "name": "InvalidK",
+          "value": {
+            "type": "U256",
+            "value": "6"
+          }
+        },
+        {
+          "name": "InsufficientOutputAmount",
+          "value": {
+            "type": "U256",
+            "value": "7"
+          }
+        },
+        {
+          "name": "InvalidInputAmount",
+          "value": {
+            "type": "U256",
+            "value": "8"
+          }
+        },
+        {
+          "name": "InputTooLarge",
+          "value": {
+            "type": "U256",
+            "value": "9"
+          }
+        },
+        {
+          "name": "InsufficientFee",
+          "value": {
+            "type": "U256",
+            "value": "10"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "version": "v3.12.0",
+  "name": "OnionRouter",
+  "bytecode": "051140214041406a408e40ba40ca40d840e640f4410241104120412f413d41564276432101000101000ed3e8e81bc9b4000c000d1600a1021400a10456a10305a001a0025f01000101000ed3c7e7c76db4000c000dcaa1021600a10456a10307a001a0045f010000000013d3eb8e3fa9b4a002451372c87b000ea002ca461372ce7b06a001a0025fa002a101000b010000000010d359022261b4000c000ea0041400421372cc7b08a001a0045fa004ba000b010002020014d30ff51464b4000c000ea0041400421372cd7b09a001a0041600160161a00416001601bb000b010000000004d37a8fa0fdb4000c000b010000000103d3d88dd69ba00002010000000103d34ffef083a00102010000000103d3a73dfe2da00202010000000103d3270acdd7a00302010000000103d37dbbcbc9a004020000000000060ca103caa1021400a1040000010100051600a001451372c87b000000000005a0030c2f1372c97b00000000000ca0030c301372ca7b56a003a0002a331372cb7b01030c190140a6d3bc88db41160956340d7b0c0d160001060d13091602011317141713171217111710170f170e170d170c0c17150c17160c17170c17181606cd414c402b0c0d16000107041c4c11160516061607a316051607160d0f0f1600010b171717161715160717184a12160516061607a316051607030f0f160101071717171617151607130a2d17184a402a0c0d16000107041c4c11160516061607a316051607160d0f0f16000109171717161715161517184a12160516061607a316051607040f0f160101071717171617151615130a2d171816151608340e7b0a0c0d16000106160516061607161516161617160c761605d10e2ca21605160b16180f0c16040110160a1400424c0a16050c0d16000106160a0f0c1603010f1615020100050b04405fd34f1b0ce50c17050c17060c17070c17080c17091602cd414c40220c0d16000107041c4c0916030d0f1600010c1707170617054a111603030e111601010617091708170717061705160816090e0c160101044a40210c0d16000107041c4c0916030d0f1600010a1707170617054a111603040e111601010617091708170717061705160816090e0c16010104160513671016042b2c1367102d170a160516061607160a02",
+  "codeHash": "333646eb5fd44384550d0291de7a624dd300494a000082bf4cd82761e6f57154",
+  "fieldsSig": {
+    "names": [
+      "upgradableSettings"
+    ],
+    "types": [
+      "UpgradableSettings"
+    ],
+    "isMutable": [
+      true
+    ]
+  },
+  "eventsSig": [
+    {
+      "name": "ChangeOwnerCommence",
+      "fieldNames": [
+        "owner",
+        "changeOwner"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address"
+      ]
+    },
+    {
+      "name": "ChangeOwnerApply",
+      "fieldNames": [
+        "owner",
+        "changeOwner"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address"
+      ]
+    },
+    {
+      "name": "MigrateCommence",
+      "fieldNames": [
+        "owner",
+        "changeCode"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "MigrateApply",
+      "fieldNames": [
+        "owner",
+        "changeCode"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "MigrateWithFieldsApply",
+      "fieldNames": [
+        "owner",
+        "changeCode",
+        "changeImmFieldsEncoded",
+        "changeMutFieldsEncoded"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "Trade",
+      "fieldNames": [
+        "tokenId",
+        "caller",
+        "tokenInId",
+        "amountIn",
+        "amountOut",
+        "platformFeeAmount",
+        "royaltyFeeAmount",
+        "royaltyRecipient"
+      ],
+      "fieldTypes": [
+        "ByteVec",
+        "Address",
+        "ByteVec",
+        "U256",
+        "U256",
+        "U256",
+        "U256",
+        "Address"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "changeOwner",
+      "paramNames": [
+        "changeOwner"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "migrate",
+      "paramNames": [
+        "changeCode"
+      ],
+      "paramTypes": [
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "changeOwnerApply",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "migrateApply",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "migrateWithFieldsApply",
+      "paramNames": [
+        "newImmFieldsEncoded",
+        "newMutFieldsEncoded"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "resetUpgrade",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "getUpgradeDelay",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "getOwner",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "Address"
+      ]
+    },
+    {
+      "name": "getNewOwner",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "Address"
+      ]
+    },
+    {
+      "name": "getUpgradeCommenced",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "getNewCode",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "resetFields",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "assertOnlyOwner",
+      "paramNames": [
+        "caller"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "assertUpgradeNotPending",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "assertUpgradeDelayElapsed",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "swapExactTokenForToken",
+      "paramNames": [
+        "bondingPair",
+        "dexPair",
+        "tokenLauncher",
+        "commentTracker",
+        "profileTracker",
+        "caller",
+        "tokenInId",
+        "amountIn",
+        "amountOutMin",
+        "deadline",
+        "comment",
+        "referrer"
+      ],
+      "paramTypes": [
+        "BondingPair",
+        "DexPair",
+        "TokenLauncher",
+        "CommentTracker",
+        "ProfileTracker",
+        "Address",
+        "ByteVec",
+        "U256",
+        "U256",
+        "U256",
+        "ByteVec",
+        "Address"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "simulateSwapExactTokenForToken",
+      "paramNames": [
+        "bondingPair",
+        "dexPair",
+        "tokenInId",
+        "amountIn",
+        "slippage"
+      ],
+      "paramTypes": [
+        "BondingPair",
+        "DexPair",
+        "ByteVec",
+        "U256",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": [
+        "U256",
+        "U256",
+        "U256",
+        "U256"
+      ]
+    }
+  ],
+  "constants": [],
+  "enums": [
+    {
+      "name": "UpgradeErrorCodes",
+      "fields": [
+        {
+          "name": "Forbidden",
+          "value": {
+            "type": "U256",
+            "value": "13000"
+          }
+        },
+        {
+          "name": "UpgradePending",
+          "value": {
+            "type": "U256",
+            "value": "13001"
+          }
+        },
+        {
+          "name": "UpgradeNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13002"
+          }
+        },
+        {
+          "name": "UpgradeDelayNotExpired",
+          "value": {
+            "type": "U256",
+            "value": "13003"
+          }
+        },
+        {
+          "name": "MigrateNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13004"
+          }
+        },
+        {
+          "name": "MigrateWithFieldsNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13005"
+          }
+        },
+        {
+          "name": "ChangeOwnerNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13006"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RouterErrors",
+      "fields": [
+        {
+          "name": "Expired",
+          "value": {
+            "type": "U256",
+            "value": "1"
+          }
+        },
+        {
+          "name": "SlippageTooHigh",
+          "value": {
+            "type": "U256",
+            "value": "2"
+          }
+        }
+      ]
+    }
+  ]
+}

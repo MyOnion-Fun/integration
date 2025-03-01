@@ -1,0 +1,98 @@
+{
+  "version": "v3.12.0",
+  "name": "FeeCollector",
+  "bytecode": "02024021404801010404000ed3458b232216011603a9a00016032aa10005160016021601160361010200010114d35a4e8681ce00b4450d7ba0001700ce001600a806b4ce001600600ca100160002",
+  "codeHash": "b9869938bde02e371b216765f4a248764f889af0bacac7204cbd397db01844f8",
+  "fieldsSig": {
+    "names": [
+      "recipient",
+      "tradeFeeCollected"
+    ],
+    "types": [
+      "Address",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      true
+    ]
+  },
+  "eventsSig": [
+    {
+      "name": "DepositFee",
+      "fieldNames": [
+        "contractAddress",
+        "user",
+        "caller",
+        "feeAmount"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address",
+        "Address",
+        "U256"
+      ]
+    },
+    {
+      "name": "HarvestFee",
+      "fieldNames": [
+        "caller",
+        "recipient",
+        "feeAmount"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address",
+        "U256"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "depositFee",
+      "paramNames": [
+        "contractAddress",
+        "caller",
+        "user",
+        "feeAmount"
+      ],
+      "paramTypes": [
+        "Address",
+        "Address",
+        "Address",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "harvest",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    }
+  ],
+  "constants": [],
+  "enums": [
+    {
+      "name": "ErrorCodes",
+      "fields": [
+        {
+          "name": "Unauthorized",
+          "value": {
+            "type": "U256",
+            "value": "1"
+          }
+        }
+      ]
+    }
+  ]
+}

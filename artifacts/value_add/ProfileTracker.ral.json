@@ -1,0 +1,500 @@
+{
+  "version": "v3.12.0",
+  "name": "ProfileTracker",
+  "bytecode": "081640214041406a408e40ba40ca40d840e640f4410241104120412f413d4156423c425d4394443644ab44ca44f101000101000ed3e8e81bc9b4000c000d1600a1051400a10756a10605a004a0055f01000101000ed3c7e7c76db4000c000dcaa1051600a10756a10607a004a0075f010000000013d3eb8e3fa9b4a005451372c87b000ea005ca461372ce7b06a004a0055fa005a104000b010000000010d359022261b4000c000ea0071400421372cc7b08a004a0075fa007ba000b010002020014d30ff51464b4000c000ea0071400421372cd7b09a004a0071600160161a00716001601bb000b010000000004d37a8fa0fdb4000c000b010000000103d3d88dd69ba00302010000000103d34ffef083a00402010000000103d3a73dfe2da00502010000000103d3270acdd7a00602010000000103d37dbbcbc9a007020000000000060ca106caa1051400a1070000010100051600a004451372c87b000000000005a0060c2f1372c97b00000000000ca0060c301372ca7b56a006a0032a331372cb7b01030610004073d396161bd2b4170616060013170e170d170c170b170a17091708170716001708160117091602170a1604170c1605170b16074c403a16081609160a160b160c160d160e13060e0c140a5f5f6d61705f5f305f5f16064744cb170f160f0102110e0c160f0102100e0c160f01020f0e0c160f01020e0e0c160f01020d0e0c160f01020c0e0c160f01021206160616081609160a160d160c160b754a402016031606464c021603170e1606d1a2140a5f5f6d61705f5f305f5f16064744b116081609160a160b160c160d160ed201070a160616081609160a160d160e160c160b7601030303000fd3883f81f7b4a000451372c87b1600d10e2ca216001601160200110003030f0040a516000013170a17091708170717061705170417030c170b1602170c1601170d16034c40511609170b160916022a170c160a170d160ba00131160ca001341a4c05160ca0022a17094a02160c1709160416051606160716081609160a13060e0c140a5f5f6d61705f5f305f5f16004744cb170e160e0102110e0c160e0102100e0c160e01020f0e0c160e01020e0e0c160e01020d0e0c160e01020c0e0c160e010212061600160416051606160916081607754a402216011600464c021601170a160217091600d1a2140a5f5f6d61705f5f305f5f16004744b1160416051606160716081609160ad201070a16001604160516061609160a1608160776160ba00131160ca001341a4c071600d1a2160da00216000012160ba00133160ca001341a4c091600d1a2160d1602130a2d160000120003030c00405116000013170a1709170817071706170517041703160916012a170916034c4031160416051606160716081609160a13060e0c140a5f5f6d61705f5f305f5f16004744cb170b160b0102110e0c160b0102100e0c160b01020f0e0c160b01020e0e0c160b01020d0e0c160b01020c0e0c160b01024a101602d1a2140a5f5f6d61705f5f305f5f16004744b1160416051606160716081609160ad201070100010208403cd3243a6b1a140a5f5f6d61705f5f305f5f16004744cbc54b0904140014001400140014000cca02030c0d0d140a5f5f6d61705f5f305f5f16004744cb1701160101010d0d0d160101010e0d0d160101010f0d0d16010101100d0d16010101110d0d1601010113060d0d160101010201000101000dd37ad2b922b4a004451372c87b1207b4a0001600601600a100010002020011d3989288a9b4a004451372c87b1208b4a001a00216001601731600a1011601a102",
+  "codeHash": "1201d5d80c35870d66de46f6b645972a97e75214f5badd91c2f9de72ae8f80da",
+  "fieldsSig": {
+    "names": [
+      "router",
+      "referralThreshold",
+      "referralReward",
+      "upgradableSettings"
+    ],
+    "types": [
+      "Address",
+      "U256",
+      "U256",
+      "UpgradableSettings"
+    ],
+    "isMutable": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "eventsSig": [
+    {
+      "name": "ChangeOwnerCommence",
+      "fieldNames": [
+        "owner",
+        "changeOwner"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address"
+      ]
+    },
+    {
+      "name": "ChangeOwnerApply",
+      "fieldNames": [
+        "owner",
+        "changeOwner"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address"
+      ]
+    },
+    {
+      "name": "MigrateCommence",
+      "fieldNames": [
+        "owner",
+        "changeCode"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "MigrateApply",
+      "fieldNames": [
+        "owner",
+        "changeCode"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "MigrateWithFieldsApply",
+      "fieldNames": [
+        "owner",
+        "changeCode",
+        "changeImmFieldsEncoded",
+        "changeMutFieldsEncoded"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "CreateProfile",
+      "fieldNames": [
+        "caller",
+        "pfp",
+        "name",
+        "status",
+        "xp",
+        "referrer",
+        "linkingId",
+        "socials"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec",
+        "U256",
+        "Address",
+        "ByteVec",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "UpdateProfile",
+      "fieldNames": [
+        "caller",
+        "pfp",
+        "name",
+        "status",
+        "xp",
+        "linkingId",
+        "socials"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec",
+        "U256",
+        "ByteVec",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "UpdateRouterAddress",
+      "fieldNames": [
+        "caller",
+        "oldRouter",
+        "newRouter"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address",
+        "Address"
+      ]
+    },
+    {
+      "name": "UpdateReferralSettings",
+      "fieldNames": [
+        "caller",
+        "oldReferralThreshold",
+        "oldReferralReward",
+        "newReferralThreshold",
+        "newReferralReward"
+      ],
+      "fieldTypes": [
+        "Address",
+        "U256",
+        "U256",
+        "U256",
+        "U256"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "changeOwner",
+      "paramNames": [
+        "changeOwner"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "migrate",
+      "paramNames": [
+        "changeCode"
+      ],
+      "paramTypes": [
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "changeOwnerApply",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "migrateApply",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "migrateWithFieldsApply",
+      "paramNames": [
+        "newImmFieldsEncoded",
+        "newMutFieldsEncoded"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "resetUpgrade",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "getUpgradeDelay",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "getOwner",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "Address"
+      ]
+    },
+    {
+      "name": "getNewOwner",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "Address"
+      ]
+    },
+    {
+      "name": "getUpgradeCommenced",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "getNewCode",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "resetFields",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "assertOnlyOwner",
+      "paramNames": [
+        "caller"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "assertUpgradeNotPending",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "assertUpgradeDelayElapsed",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "manageProfileSelf",
+      "paramNames": [
+        "pfp",
+        "name",
+        "status",
+        "referrer",
+        "linkingId",
+        "socials"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "ByteVec",
+        "ByteVec",
+        "Address",
+        "ByteVec",
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "manageProfileFromRouter",
+      "paramNames": [
+        "caller",
+        "referrer",
+        "xp"
+      ],
+      "paramTypes": [
+        "Address",
+        "Address",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "increaseXP",
+      "paramNames": [
+        "caller",
+        "referrer",
+        "xp"
+      ],
+      "paramTypes": [
+        "Address",
+        "Address",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "rewardReferrer",
+      "paramNames": [
+        "referrer",
+        "reward",
+        "caller"
+      ],
+      "paramTypes": [
+        "Address",
+        "U256",
+        "Address"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "loadUserProfile",
+      "paramNames": [
+        "caller"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": [
+        "Bool",
+        "UserProfile"
+      ]
+    },
+    {
+      "name": "updateRouterAddress",
+      "paramNames": [
+        "newRouter"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "updateReferralSettings",
+      "paramNames": [
+        "newReferralThreshold",
+        "newReferralReward"
+      ],
+      "paramTypes": [
+        "U256",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    }
+  ],
+  "constants": [],
+  "enums": [
+    {
+      "name": "UpgradeErrorCodes",
+      "fields": [
+        {
+          "name": "Forbidden",
+          "value": {
+            "type": "U256",
+            "value": "13000"
+          }
+        },
+        {
+          "name": "UpgradePending",
+          "value": {
+            "type": "U256",
+            "value": "13001"
+          }
+        },
+        {
+          "name": "UpgradeNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13002"
+          }
+        },
+        {
+          "name": "UpgradeDelayNotExpired",
+          "value": {
+            "type": "U256",
+            "value": "13003"
+          }
+        },
+        {
+          "name": "MigrateNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13004"
+          }
+        },
+        {
+          "name": "MigrateWithFieldsNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13005"
+          }
+        },
+        {
+          "name": "ChangeOwnerNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13006"
+          }
+        }
+      ]
+    }
+  ],
+  "mapsSig": {
+    "names": [
+      "userProfileCollection"
+    ],
+    "types": [
+      "Map[Address,UserProfile]"
+    ]
+  }
+}

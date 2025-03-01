@@ -17,6 +17,8 @@ You can explore the MyOnion.fun API, which interacts with these contracts, using
 
 [**Testnet**](https://api.testnet.myonion.fun/docs)
 
+[**Mainnet**](https://api.mainnet.myonion.fun/docs)
+
 ---
 
 # 1. 🍃 OnionRouter Contract
@@ -33,6 +35,8 @@ The **OnionRouter** is responsible for:
 ## 🔌 Deployments
 
 **Testnet:** v3aindjTb8VeftHabD1BUrxp8KErwL77Esv5fBFAcEq5
+
+**Mainnet:** 29c4EEH1aZr5HDumULCFp1eJN1bWftojCGepqTpovyQhd
 
 ---
 
@@ -167,6 +171,8 @@ The **TokenLauncher** is designed for:
 ## 🔌 Deployments
 
 **Testnet:** 243NXdSvhN4WfkvJsELXUb7cNYM9mWYXwk2t5NGK4HY7R
+
+**Mainnet:** 28P3FfodKZqBQ9zGhgnd86WUfDqd4WLqSyZBmXFHgJFZq
 
 ---
 

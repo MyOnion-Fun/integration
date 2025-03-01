@@ -1,0 +1,116 @@
+[
+  {
+    "name": "TokenMetaData",
+    "fieldNames": [
+      "owner",
+      "ownerFeeCollector",
+      "logo",
+      "description",
+      "socials",
+      "bondingCurve",
+      "bondingCurveV",
+      "dexPair",
+      "dexPairV"
+    ],
+    "fieldTypes": [
+      "Address",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec"
+    ],
+    "isMutable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "name": "TokenLauncherSettings",
+    "fieldNames": [
+      "memeTokenTemplateId",
+      "bondingPairTemplateId",
+      "dexPairTemplateId",
+      "feeCollector",
+      "router"
+    ],
+    "fieldTypes": [
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "FeeCollector",
+      "OnionRouter"
+    ],
+    "isMutable": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "name": "UserProfile",
+    "fieldNames": [
+      "pfp",
+      "name",
+      "status",
+      "socials",
+      "linkingId",
+      "xp",
+      "referrer"
+    ],
+    "fieldTypes": [
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "ByteVec",
+      "U256",
+      "Address"
+    ],
+    "isMutable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "name": "UpgradableSettings",
+    "fieldNames": [
+      "upgradeDelay",
+      "owner",
+      "newOwner",
+      "upgradeCommenced",
+      "newCode"
+    ],
+    "fieldTypes": [
+      "U256",
+      "Address",
+      "Address",
+      "U256",
+      "ByteVec"
+    ],
+    "isMutable": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+]

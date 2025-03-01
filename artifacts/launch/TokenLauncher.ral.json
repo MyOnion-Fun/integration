@@ -1,0 +1,578 @@
+{
+  "version": "v3.12.0",
+  "name": "TokenLauncher",
+  "bytecode": "0a1540214041406a408e40ba40ca40d840e640f4410241104120412f413d4156426c4379442e44d9454d457401000101000ed3e8e81bc9b4000c000d1600a1071400a10956a10805a006a0075f01000101000ed3c7e7c76db4000c000dcaa1071600a10956a10807a006a0095f010000000013d3eb8e3fa9b4a007451372c87b000ea007ca461372ce7b06a006a0075fa007a106000b010000000010d359022261b4000c000ea0091400421372cc7b08a006a0095fa009ba000b010002020014d30ff51464b4000c000ea0091400421372cd7b09a006a0091600160161a00916001601bb000b010000000004d37a8fa0fdb4000c000b010000000103d3d88dd69ba00502010000000103d34ffef083a00602010000000103d3a73dfe2da00702010000000103d3270acdd7a00802010000000103d37dbbcbc9a009020000000000060ca108caa1071400a1090000010100051600a006451372c87b000000000005a0080c2f1372c97b00000000000ca0080c301372ca7b56a008a0052a331372cb7b0103051501407bd33fab95a31600431340803113067b16014313408031117b1602431341003113077b1603431344003113087b1604431342003113097bb4170516001601131213c8033b2e3c9fd0803ce80000001406414c50480001130564130064170717061605d1a2a0001606160713c8033b2e3c9fd0803ce80000001605c7170816051301640c130164170a17091605d1a2a0031609160aaf170b0a1608160516001601131213c8033b2e3c9fd0803ce8000000160b751605160b160216031604140014001400140017141713171217111710170f170e170d170c1605d1a2140a5f5f6d61705f5f305f5f160844b1160c160d160e160f16101611161216131614d20109120716081605160216031604731608020103010f01407dd376cfaa70b4170116000013170a1709170817071706170517041703170216021601450d7b16071400410f7bb1a004a0031600cd13c80295be96e64066972000000013c8033b2e3c9fd0803ce8000000160113c1e8d4a5100013c0df382a40130a640c0c04130364170c170b16017ad1a2160013c8033b2e3c9fd0803ce8000000a3a001160b160caf170d160d1707140131170816021603160416051606160716081609160a13080e0c140a5f5f6d61705f5f305f5f160044cb170e160e010213070e0c160e010213060e0c160e0102110e0c160e0102100e0c160e01020f0e0c160e01020e0e0c160e01020d0e0c160e01020c0e0c160e0102120816001601160d60160d020100010d014061d3a059c717b4170116000013170a170917081707170617051704170317021609140041107ba002160316010f0d1607010e170b160b1709140131170a16021603160416051606160716081609160a13080e0c140a5f5f6d61705f5f305f5f160044cb170c160c010213070e0c160c010213060e0c160c0102110e0c160c0102100e0c160c01020f0e0c160c01020e0e0c160c01020d0e0c160c01020c0e0c160c0102120916001601160b60160b020100040f00405bd3f3760109b4170416000013170d170c170b170a1709170817071706170516051604450d7b16011707160217081603170916051606160716081609160a160b160c160d13080e0c140a5f5f6d61705f5f305f5f160044cb170e160e010213070e0c160e010213060e0c160e0102110e0c160e0102100e0c160e01020f0e0c160e01020e0e0c160e01020d0e0c160e01020c0e0c160e0102120716001604160116021603730100010209403bd3eab8f3a2140a5f5f6d61705f5f305f5f160044cbc50e7b0c0d0d140a5f5f6d61705f5f305f5f160044cb1701160101010d0d0d160101010e0d0d160101010f0d0d16010101100d0d16010101110d0d1601010113060d0d1601010113070d0d1601010113080d0d1601010102010005050010d32b487830b4a006451372c87b16001601160216031604a104a103a102a101a100",
+  "codeHash": "464b1641fb13b6963f5d1046e901500e202ee939f6653eab50407c5b152100f6",
+  "fieldsSig": {
+    "names": [
+      "settings",
+      "upgradableSettings"
+    ],
+    "types": [
+      "TokenLauncherSettings",
+      "UpgradableSettings"
+    ],
+    "isMutable": [
+      true,
+      true
+    ]
+  },
+  "eventsSig": [
+    {
+      "name": "ChangeOwnerCommence",
+      "fieldNames": [
+        "owner",
+        "changeOwner"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address"
+      ]
+    },
+    {
+      "name": "ChangeOwnerApply",
+      "fieldNames": [
+        "owner",
+        "changeOwner"
+      ],
+      "fieldTypes": [
+        "Address",
+        "Address"
+      ]
+    },
+    {
+      "name": "MigrateCommence",
+      "fieldNames": [
+        "owner",
+        "changeCode"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "MigrateApply",
+      "fieldNames": [
+        "owner",
+        "changeCode"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "MigrateWithFieldsApply",
+      "fieldNames": [
+        "owner",
+        "changeCode",
+        "changeImmFieldsEncoded",
+        "changeMutFieldsEncoded"
+      ],
+      "fieldTypes": [
+        "Address",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "CreateToken",
+      "fieldNames": [
+        "tokenId",
+        "caller",
+        "symbol",
+        "name",
+        "decimals",
+        "totalSupply",
+        "royaltyFeeCollector"
+      ],
+      "fieldTypes": [
+        "ByteVec",
+        "Address",
+        "ByteVec",
+        "ByteVec",
+        "U256",
+        "U256",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "CreateBondingCurve",
+      "fieldNames": [
+        "tokenId",
+        "caller",
+        "bpContract"
+      ],
+      "fieldTypes": [
+        "ByteVec",
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "UpdateTokenMeta",
+      "fieldNames": [
+        "tokenId",
+        "caller",
+        "logo",
+        "description",
+        "socials"
+      ],
+      "fieldTypes": [
+        "ByteVec",
+        "Address",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "UpdateTokenBondingCurve",
+      "fieldNames": [
+        "tokenId",
+        "caller",
+        "bondingCurve"
+      ],
+      "fieldTypes": [
+        "ByteVec",
+        "Address",
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "UpdateTokenDexPair",
+      "fieldNames": [
+        "tokenId",
+        "caller",
+        "dexPair"
+      ],
+      "fieldTypes": [
+        "ByteVec",
+        "Address",
+        "ByteVec"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "changeOwner",
+      "paramNames": [
+        "changeOwner"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "migrate",
+      "paramNames": [
+        "changeCode"
+      ],
+      "paramTypes": [
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "changeOwnerApply",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "migrateApply",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "migrateWithFieldsApply",
+      "paramNames": [
+        "newImmFieldsEncoded",
+        "newMutFieldsEncoded"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "resetUpgrade",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "getUpgradeDelay",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "getOwner",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "Address"
+      ]
+    },
+    {
+      "name": "getNewOwner",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "Address"
+      ]
+    },
+    {
+      "name": "getUpgradeCommenced",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "getNewCode",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "resetFields",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "assertOnlyOwner",
+      "paramNames": [
+        "caller"
+      ],
+      "paramTypes": [
+        "Address"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "assertUpgradeNotPending",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "assertUpgradeDelayElapsed",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    },
+    {
+      "name": "createToken",
+      "paramNames": [
+        "symbol",
+        "name",
+        "logo",
+        "description",
+        "socials"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": [
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "createBondingCurve",
+      "paramNames": [
+        "tokenId"
+      ],
+      "paramTypes": [
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": [
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "createDexPair",
+      "paramNames": [
+        "tokenId"
+      ],
+      "paramTypes": [
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": [
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "updateTokenMeta",
+      "paramNames": [
+        "tokenId",
+        "logo",
+        "description",
+        "socials"
+      ],
+      "paramTypes": [
+        "ByteVec",
+        "ByteVec",
+        "ByteVec",
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "loadTokenMeta",
+      "paramNames": [
+        "tokenId"
+      ],
+      "paramTypes": [
+        "ByteVec"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": [
+        "TokenMetaData"
+      ]
+    },
+    {
+      "name": "updateSettings",
+      "paramNames": [
+        "newSettings"
+      ],
+      "paramTypes": [
+        "TokenLauncherSettings"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": []
+    }
+  ],
+  "constants": [
+    {
+      "name": "MEMEDECIMALS",
+      "value": {
+        "type": "U256",
+        "value": "18"
+      }
+    },
+    {
+      "name": "MEMEAMOUNT",
+      "value": {
+        "type": "U256",
+        "value": "1000000000000000000000000000"
+      }
+    },
+    {
+      "name": "MEMELAUNCHAMOUNT",
+      "value": {
+        "type": "U256",
+        "value": "800000000000000000000000000"
+      }
+    },
+    {
+      "name": "K",
+      "value": {
+        "type": "U256",
+        "value": "1000000000000"
+      }
+    },
+    {
+      "name": "A",
+      "value": {
+        "type": "U256",
+        "value": "3745000000"
+      }
+    }
+  ],
+  "enums": [
+    {
+      "name": "UpgradeErrorCodes",
+      "fields": [
+        {
+          "name": "Forbidden",
+          "value": {
+            "type": "U256",
+            "value": "13000"
+          }
+        },
+        {
+          "name": "UpgradePending",
+          "value": {
+            "type": "U256",
+            "value": "13001"
+          }
+        },
+        {
+          "name": "UpgradeNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13002"
+          }
+        },
+        {
+          "name": "UpgradeDelayNotExpired",
+          "value": {
+            "type": "U256",
+            "value": "13003"
+          }
+        },
+        {
+          "name": "MigrateNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13004"
+          }
+        },
+        {
+          "name": "MigrateWithFieldsNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13005"
+          }
+        },
+        {
+          "name": "ChangeOwnerNotPending",
+          "value": {
+            "type": "U256",
+            "value": "13006"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ErrorCodes",
+      "fields": [
+        {
+          "name": "Unauthorized",
+          "value": {
+            "type": "U256",
+            "value": "1"
+          }
+        },
+        {
+          "name": "TokenDoesntExist",
+          "value": {
+            "type": "U256",
+            "value": "2"
+          }
+        },
+        {
+          "name": "BondingPairAlreadyCreated",
+          "value": {
+            "type": "U256",
+            "value": "3"
+          }
+        },
+        {
+          "name": "DexPairAlreadyCreated",
+          "value": {
+            "type": "U256",
+            "value": "4"
+          }
+        },
+        {
+          "name": "NameTooLong",
+          "value": {
+            "type": "U256",
+            "value": "5"
+          }
+        },
+        {
+          "name": "SymbolTooLong",
+          "value": {
+            "type": "U256",
+            "value": "6"
+          }
+        },
+        {
+          "name": "LogoTooLong",
+          "value": {
+            "type": "U256",
+            "value": "7"
+          }
+        },
+        {
+          "name": "DescriptionTooLong",
+          "value": {
+            "type": "U256",
+            "value": "8"
+          }
+        },
+        {
+          "name": "SocialsTooLong",
+          "value": {
+            "type": "U256",
+            "value": "9"
+          }
+        }
+      ]
+    }
+  ],
+  "mapsSig": {
+    "names": [
+      "tokenMetaCollection"
+    ],
+    "types": [
+      "Map[ByteVec,TokenMetaData]"
+    ]
+  }
+}
